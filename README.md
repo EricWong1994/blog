@@ -15,8 +15,6 @@ https://blog-ericwong1994.vercel.app/post/blog/
 
 [https://vercel.com/dashboard](https://vercel.com/dashboard)
 
-[https://github.com/EricWong1994/vuepress-starter](https://github.com/EricWong1994/vuepress-starter)
-
 [https://vercel.com/docs](https://vercel.com/docs)
 
 [https://vuepress.vuejs.org/zh/guide/deploy.html#vercel](https://vuepress.vuejs.org/zh/guide/deploy.html#vercel)
