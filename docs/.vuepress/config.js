@@ -13,7 +13,7 @@ module.exports = {
 			{ text: '博客', link: '/post/blog/' },
 			{
 				text: 'Github',
-				link: 'https://github.com/EricWong1994/personal-website',
+				link: 'https://github.com/EricWong1994/blog',
 			},
 		],
 		sidebar: {

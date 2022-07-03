@@ -60,7 +60,7 @@ Inside that directory, you can run several commands:
 
   npm run eject
     Removes this tool and copies build dependencies, configuration files
-    and scripts into the app directory. If you do this, you can’t go back!
+    and scripts into the app directory. If you do this, you can't go back!
 
 We suggest that you begin by typing:
 
@@ -2743,7 +2743,7 @@ class HOC extends ... {
 function getDisplayName(WrappedComponent) {
   return WrappedComponent.displayName ||
          WrappedComponent.name ||
-         ‘Component’
+         'Component'
 }
 ```
 
@@ -2818,7 +2818,7 @@ Parsing error: Leading decorators must be attached to a class declaration
 > 5 | function App(props) {
 ```
 
-Error: Cannot find module '/Users/v_wangshihao01/Desktop/学习/react/react-lesson01/config-overrides’
+Error: Cannot find module '/Users/v_wangshihao01/Desktop/学习/react/react-lesson01/config-overrides'
 
 和SRC同级建config-overrides文件
 
@@ -3681,7 +3681,7 @@ MDN中对void有这么一段说明：
 
 The void operator evaluates the given expression and then returns undefined.
 1
-void 运算符能对给定的表达式进行求值，然后返回 undefined。也就是说，void 后面你随便跟上一个表达式，返回的都是 undefined，如 void (2), void (‘hello’)。并且void是不能被重写的。但为什么是void 0 呢，void 0 是表达式中最短的。用 void 0 代替 undefined 能节省字节。不少 JavaScript 压缩工具在压缩过程中，正是将 undefined 用 void 0 代替掉了。
+void 运算符能对给定的表达式进行求值，然后返回 undefined。也就是说，void 后面你随便跟上一个表达式，返回的都是 undefined，如 void (2), void (‘hello')。并且void是不能被重写的。但为什么是void 0 呢，void 0 是表达式中最短的。用 void 0 代替 undefined 能节省字节。不少 JavaScript 压缩工具在压缩过程中，正是将 undefined 用 void 0 代替掉了。
 ————————————————
 版权声明：本文为CSDN博主「juzipchy」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/juzipchy/article/details/86367565
@@ -6029,7 +6029,7 @@ A [``](https://v5.reactrouter.com/core/api/Router) that uses the HTML5 history A
 
 ### [basename: string](https://v5.reactrouter.com/web/api/BrowserRouter/basename-string)
 
-The base URL for all locations. If your app is served from a sub-directory on your server, you’ll want to set this to the sub-directory. A properly formatted basename should have a leading slash, but no trailing slash.
+The base URL for all locations. If your app is served from a sub-directory on your server, you'll want to set this to the sub-directory. A properly formatted basename should have a leading slash, but no trailing slash.
 
 ```jsx
 <BrowserRouter basename="/calendar">
@@ -6118,7 +6118,7 @@ Note: On React < 16 you must use a [single child element](https://facebook.githu
 
 A `<Router>`that uses the hash portion of the URL (i.e. `window.location.hash`) to keep your UI in sync with the URL.
 
-**IMPORTANT NOTE:** Hash history does not support `location.key` or `location.state`. In previous versions we attempted to shim the behavior but there were edge-cases we couldn’t solve. Any code or plugin that needs this behavior won’t work. As this technique is only intended to support legacy browsers, we encourage you to configure your server to work with `<BrowserHistory>` instead.
+**IMPORTANT NOTE:** Hash history does not support `location.key` or `location.state`. In previous versions we attempted to shim the behavior but there were edge-cases we couldn't solve. Any code or plugin that needs this behavior won't work. As this technique is only intended to support legacy browsers, we encourage you to configure your server to work with `<BrowserHistory>` instead.
 
 Hash history 不支持 `location.key` 和 `location.state`。另外由于该技术只是用来支持旧版浏览器，因此更推荐大家使用 BrowserRouter，此API不再作多余介绍。
 
@@ -6177,7 +6177,7 @@ Provides declarative, accessible navigation around your application.
 
 ### [to: string](https://v5.reactrouter.com/web/api/Link/to-string)
 
-A string representation of the Link location, created by concatenating the location’s pathname, search, and hash properties.
+A string representation of the Link location, created by concatenating the location's pathname, search, and hash properties.
 
 ```jsx
 <Link to="/courses?sort=name" />
@@ -6227,7 +6227,7 @@ A function to which current location is passed as an argument and which should r
 
 When `true`, clicking the link will replace the current entry in the history stack instead of adding a new one.
 
-为 true 时，点击链接后将使用新地址替换掉上一次访问的地址，什么意思呢，比如：你依次访问 '/one' '/two' '/three' ’/four' 这四个地址，如果回退，将依次回退至 '/three' '/two' '/one' ，这符合我们的预期，假如我们把链接 '/three' 中的 replace 设为 true 时。依次点击 one two three four 然后再回退会发生什么呢？会依次退至 '/three' '/one'！ 为此我做了个在线 demo，大家可以调试体会一下 !
+为 true 时，点击链接后将使用新地址替换掉上一次访问的地址，什么意思呢，比如：你依次访问 '/one' '/two' '/three' '/four' 这四个地址，如果回退，将依次回退至 '/three' '/two' '/one' ，这符合我们的预期，假如我们把链接 '/three' 中的 replace 设为 true 时。依次点击 one two three four 然后再回退会发生什么呢？会依次退至 '/three' '/one'！ 为此我做了个在线 demo，大家可以调试体会一下 !
 
 ```jsx
 <Link to="/courses" replace />
@@ -6279,7 +6279,7 @@ const FancyLink = React.forwardRef((props, ref) => (
 
 ### ???[others](https://v5.reactrouter.com/web/api/Link/others)
 
-You can also pass props you’d like to be on the `<a>` such as a `title`, `id`, `className`, etc.
+You can also pass props you'd like to be on the `<a>` such as a `title`, `id`, `className`, etc.
 
 ## [NavLink](https://v5.reactrouter.com/web/api/NavLink)
 
@@ -6331,7 +6331,7 @@ When `true`, the active class/style will only be applied if the location is matc
 
 ### [strict: bool](https://v5.reactrouter.com/web/api/NavLink/strict-bool)
 
-When `true`, the trailing slash on a location’s `pathname` will be taken into consideration when determining if the location matches the current URL. See the [`Route strict`](https://v5.reactrouter.com/core/api/Route/strict-bool) documentation for more information.
+When `true`, the trailing slash on a location's `pathname` will be taken into consideration when determining if the location matches the current URL. See the [`Route strict`](https://v5.reactrouter.com/core/api/Route/strict-bool) documentation for more information.
 
 若为 true，只有当访问地址后缀斜杠严格匹配（有或无）时激活样式才会应用
 
@@ -6343,7 +6343,7 @@ When `true`, the trailing slash on a location’s `pathname` will be taken into 
 
 ### [isActive: func](https://v5.reactrouter.com/web/api/NavLink/isactive-func)
 
-A function to add extra logic for determining whether the link is active. This should be used if you want to do more than verify that the link’s pathname matches the current URL’s `pathname`.
+A function to add extra logic for determining whether the link is active. This should be used if you want to do more than verify that the link's pathname matches the current URL's `pathname`.
 
 决定导航是否激活，或者在导航激活时候做点别的事情。不管怎样，它不能决定对应页面是否可以渲染。
 
@@ -6498,13 +6498,13 @@ ReactDOM.render(
 );
 ```
 
-**Warning:** `<Route component>` takes precedence over `<Route render>` so don’t use both in the same `<Route>`.
+**Warning:** `<Route component>` takes precedence over `<Route render>` so don't use both in the same `<Route>`.
 
 ### [children: func](https://v5.reactrouter.com/web/api/Route/children-func)
 
 Sometimes you need to render whether the path matches the location or not. In these cases, you can use the function `children` prop. It works exactly like `render` except that it gets called whether there is a match or not.
 
-The `children` render prop receives all the same [route props](https://v5.reactrouter.com/web/api/Route/route-props) as the `component` and `render` methods, except when a route fails to match the URL, then `match` is `null`. This allows you to dynamically adjust your UI based on whether or not the route matches. Here we’re adding an `active` class if the route matches
+The `children` render prop receives all the same [route props](https://v5.reactrouter.com/web/api/Route/route-props) as the `component` and `render` methods, except when a route fails to match the URL, then `match` is `null`. This allows you to dynamically adjust your UI based on whether or not the route matches. Here we're adding an `active` class if the route matches
 
 ```jsx
 import React from "react";
@@ -6864,7 +6864,7 @@ Match `from` case sensitive; equivalent to [Route.sensitive](https://v5.reactrou
 
 ### [withRouter](https://reacttraining.com/react-router/web/api/withRouter)
 
-You can get access to the [`history`](https://reacttraining.com/react-router/web/api/history) object’s properties and the closest [``](https://reacttraining.com/react-router/web/api/Route)'s [`match`](https://reacttraining.com/react-router/web/api/match) via the `withRouter` higher-order component. `withRouter` will pass updated `match`, `location`, and `history` props to the wrapped component whenever it renders.
+You can get access to the [`history`](https://reacttraining.com/react-router/web/api/history) object's properties and the closest [``](https://reacttraining.com/react-router/web/api/Route)'s [`match`](https://reacttraining.com/react-router/web/api/match) via the `withRouter` higher-order component. `withRouter` will pass updated `match`, `location`, and `history` props to the wrapped component whenever it renders.
 
 ```js
 import React from "react";
@@ -7092,7 +7092,7 @@ exprot default 不能直接导出一个
 
 ### default as
 
-export {default as ToDoList} from ‘./toDoList’;
+export {default as ToDoList} from ‘./toDoList';
 
 
 
@@ -7106,7 +7106,7 @@ https://www.cnblogs.com/TJ-Wong/p/10212764.html
 
 
 
-git checkout -b ‘分支名称’
+git checkout -b ‘分支名称'
 
 code . 打开编辑器
 
@@ -7307,7 +7307,7 @@ class Modal extends React.Component {
     // 这意味着子元素将被挂载到一个分离的 DOM 节点中。
     // 如果要求子组件在挂载时可以立刻接入 DOM 树，
     // 例如衡量一个 DOM 节点，
-    // 或者在后代节点中使用 ‘autoFocus’，
+    // 或者在后代节点中使用 ‘autoFocus'，
     // 则需添加 state 到 Modal 中，
     // 仅当 Modal 被插入 DOM 树中才能渲染子元素。
     modalRoot.appendChild(this.el);
