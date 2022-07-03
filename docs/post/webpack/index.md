@@ -228,7 +228,7 @@ Cannot read property 'tap' of undefined
 
 
 
-### 1.module`，`chunk` 和 `bundle 的区别是什么？
+### 1.module chunk 和 bundle 的区别是什么？
 
 ##### module
 
@@ -2107,7 +2107,7 @@ webpack-dev-server 默认会将构建结果和输出文件全部作为开发服�
 
 > 推荐使用一个绝对路径。
 
-默认情况下，将使用当前工作目录作为提供内容的目录。将其设置为 `false` 以禁用 `contentBase`。
+默认情况下，将使用当前工作目录作为提供内容的目录。将其设置为 `false` 以禁用 `contentBase`
 
 **webpack.config.js**
 
@@ -2757,7 +2757,7 @@ module.exports = {
 复制代码
 ```
 
-看起来，似乎是OK了，不过呢，查看 `index.html` 和 `login.html` 会发现，都同时引入了 `index.f7d21a.js` 和 `login.f7d21a.js`，通常这不是我们想要的，我们希望，`index.html` 中只引入 `index.f7d21a.js`，`login.html` 只引入 `login.f7d21a.js`。
+看起来，似乎是OK了，不过呢，查看 `index.html` 和 `login.html` 会发现，都同时引入了 `index.f7d21a.js` 和 `login.f7d21a.js`，通常这不是我们想要的，我们希望，`index.html` 中只引入 `index.f7d21a.js`,`login.html` 只引入 `login.f7d21a.js`
 
 `HtmlWebpackPlugin` 提供了一个 `chunks` 的参数，可以接受一个数组，配置此参数仅会将数组中指定的js引入到html文件中，此外，如果你需要引入多个JS文件，仅有少数不想引入，还可以指定 `excludeChunks` 参数，它接受一个数组。
 
