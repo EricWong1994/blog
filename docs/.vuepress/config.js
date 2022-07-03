@@ -20,9 +20,11 @@ module.exports = {
 			// ...blogSidebar,
 			'/post/': postsHeader,
 		},
+		sidebarDepth: 2,
 	},
-	markdown: {
-		// extractHeaders: ['h2', 'h3', 'h4'],
-		extractHeaders: ['h1', 'h2', 'h3'],
-	},
+	// markdown: {
+	// extractHeaders: ['h2', 'h3', 'h4'],
+	// extractHeaders: ['h1', 'h2', 'h3'],
+	// includeLevel: [2, 3, 4],
+	// },
 };
