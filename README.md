@@ -8,7 +8,7 @@
 
 博客地址：
 
-https://vuepress-starter-3mfpuoro7-ericwong1994.vercel.app/post/blog/
+https://blog-ericwong1994.vercel.app/post/blog/
 
 
 参考：
