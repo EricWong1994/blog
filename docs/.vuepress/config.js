@@ -1,6 +1,5 @@
-// import blogSidebar from './data/blog';
-const { sidebar: blogSidebar } = require('../data/blog');
-console.log('blogSidebar: ', blogSidebar);
+const postsHeader = require('./post.header');
+// const { sidebar: blogSidebar } = require('../data/blog');
 
 module.exports = {
 	// base: '/',
@@ -11,14 +10,19 @@ module.exports = {
 			// { text: '主页', link: '/' },
 			// { text: '博客', link: '/blog/' },
 			// { text: '博客', link: '/blog/index.md' },
-			{ text: '博客', link: '/pages/blog/index.md' },
+			{ text: '博客', link: '/post/blog/' },
 			{
 				text: 'Github',
 				link: 'https://github.com/EricWong1994/personal-website',
 			},
 		],
 		sidebar: {
-			...blogSidebar,
+			// ...blogSidebar,
+			'/post/': postsHeader,
 		},
+	},
+	markdown: {
+		// extractHeaders: ['h2', 'h3', 'h4'],
+		extractHeaders: ['h1', 'h2', 'h3'],
 	},
 };

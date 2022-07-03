@@ -1,3 +1,12 @@
+---
+title: "React 111"
+date: 2022-07-03
+tags:
+  - react
+categories:
+  - 前端
+---
+
 <åßhttps://www.cnblogs.com/katydids/p/10014111.html>
 
 16.8： hooks
@@ -61,13 +70,13 @@ We suggest that you begin by typing:
 
 
 
-![1579435917234](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/.\images\脚手架.png)
+![1579435917234](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/./images/脚手架.png)
 
 
 
 输入 npm run eject
 
-![1579438184472](E:\20200119笔记备份\11React\react最全\images\npmruneject)
+![1579438184472](./images/npmruneject.png)
 
 
 
@@ -190,7 +199,7 @@ import ReactDOM from 'react-dom';
 ReactDOM.render(<h1>你好，react</h1>, document.querySelector('#root'));
 ```
 
-![1579440436545](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/.\images\简单index.png)
+![1579440436545](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/./images/简单index.png)
 
 #### class声明方式
 
@@ -232,7 +241,7 @@ export default class App extends Component {
 }
 ```
 
-![1579441337530](E:/20200119%E7%AC%94%E8%AE%B0%E5%A4%87%E4%BB%BD/11React/react%E6%9C%80%E5%85%A8/images/%E7%B1%BB%E7%BB%84%E4%BB%B6.png)
+![1579441337530](./images/leizujian.png)
 
 render的第一个参数是元素
 
@@ -853,13 +862,13 @@ import React, {Component, Fragment} from 'react'; // 碎片
 
 组件目录下建立一个index.js文件
 
-![1579444162032](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/.\images\组件目录.png)
+![1579444162032](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/./images/组件目录.png)
 
 #### 导入导出简写方式
 
 
 
-![1579444597227](E:\20200119笔记备份\11React\react最全\images\简写导入导出.png)
+![1579444597227](./images/jianxie.png)
 
 
 
@@ -2158,7 +2167,7 @@ React.Component.prototype.http = services;
 
 ### antd配置按需加载
 
-![1579096041107](.\images\按需加载antd)
+![1579096041107](./images/anxujiazai-antd.png)
 
 根目录下创建config-overrides.js
 
@@ -2182,17 +2191,17 @@ module.exports = function override(config, env) {
 };
 ```
 
-![1579096398026](.\images\package1)
+![1579096398026](./images/package1.png)
 
 
 
-![1579096323895](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/.\images\package2)
+![1579096323895](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/./images/package2)
 
 
 
 具名导入导出
 
-![1579096436146](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/.\images\package3)
+![1579096436146](/Users/v_wangshihao01/Documents/20191009笔记备份/11React/react最全/./images/package3)
 
 
 
@@ -2470,8 +2479,6 @@ ReactDOM.render(<Hoc stage="React" />, document.querySelector('#root'))
 可以对原组件的props进行增删改查，通常是查找和增加，删除和修改的话，需要考虑到不能破坏原组件。
 下面是添加新的props：
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 ```
 function ppHOC(WrappedComponent) {
   return class PP extends React.Component {
@@ -2485,14 +2492,10 @@ function ppHOC(WrappedComponent) {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 #### **(2). 通过refs访问组件实例**
 
 可以通过ref回调函数的形式来访问传入组件的实例，进而调用组件相关方法或其他操作。
 例如：
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 //WrappedComponent初始渲染时候会调用ref回调，传入组件实例，在proc方法中，就可以调用组件方法
@@ -2510,14 +2513,10 @@ function refsHOC(WrappedComponent) {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 #### **(3). 提取state**
 
 你可以通过传入 props 和回调函数把 state 提取出来，类似于 smart component 与 dumb component。更多关于 dumb and smart component。
 提取 state 的例子：提取了 input 的 value 和 onChange 方法。这个简单的例子不是很常规，但足够说明问题。
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```js
 function ppHOC(WrappedComponent) {
@@ -2562,8 +2561,6 @@ class Example extends React.Component {
 为了封装样式、布局等目的，可以将WrappedComponent用组件或元素包裹起来。
 例如:
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 ```
 function ppHOC(WrappedComponent) {
   return class PP extends React.Component {
@@ -2578,15 +2575,11 @@ function ppHOC(WrappedComponent) {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 ### **2. 继承反转(Inheritance Inversion)**
 
 HOC继承了WrappedComponent，意味着可以访问到WrappedComponent的state，props，生命周期和render方法。如果在HOC中定义了与WrappedComponent同名方法，将会发生覆盖，就必须手动通过super进行调用。通过完全操作WrappedComponent的render方法返回的元素树，可以真正实现渲染劫持。这种思想具有较强的入侵性。
 
 大致形式如下：
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```js
 function ppHOC(WrappedComponent) {
@@ -2608,8 +2601,6 @@ function ppHOC(WrappedComponent) {
 
 例如，实现一个显示loading的请求。组件中存在网络请求，完成请求前显示loading，完成后再显示具体内容。
 可以用高阶组件实现如下：
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 function hoc(ComponentClass) {
@@ -2642,8 +2633,6 @@ export default class ComponentClass extends React.Component {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 #### **(1) 渲染劫持**
 
 继承反转这种模式，可以劫持被继承class的render内容，进行修改，过滤后，返回新的显示内容。
@@ -2660,8 +2649,6 @@ export default class ComponentClass extends React.Component {
 虽然通过 WrappedComponent.prototype.render 你可以访问到 render 方法，不过还需要模拟 WrappedComponent 的实例和它的 props，还可能亲自处理组件的生命周期，而不是交给 React。记住，React 在内部处理了组件实例，你处理实例的唯一方法是通过 this 或者 refs。
 
 例如下面，过滤掉原组件中的ul元素：
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```js
 function hoc(ComponentClass) {
@@ -2700,14 +2687,10 @@ export default class ComponentClass extends React.Component {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 #### **(2) 操作state**
 
 HOC可以读取，编辑和删除WrappedComponent实例的state，可以添加state。不过这个可能会破坏WrappedComponent的state，所以，要限制HOC读取或添加state，添加的state应该放在单独的命名空间里，而不是和WrappedComponent的state混在一起。
 例如：通过访问WrappedComponent的props和state来做调试
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```js
 export function IIHOCDEBUGGER(WrappedComponent) {
@@ -2726,13 +2709,9 @@ export function IIHOCDEBUGGER(WrappedComponent) {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 #### **(3) 条件渲染**
 
 当 this.props.loggedIn 为 true 时，这个 HOC 会完全渲染 WrappedComponent 的渲染结果。（假设 HOC 接收到了 loggedIn 这个 prop）
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 function iiHOC(WrappedComponent) {
@@ -2748,14 +2727,10 @@ function iiHOC(WrappedComponent) {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 #### **(4) 解决WrappedComponent名字丢失问题**
 
 用HOC包裹的组件会丢失原先的名字，影响开发和调试。可以通过在WrappedComponent的名字上加一些前缀来作为HOC的名字，以方便调试。
 例如：
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 //或
@@ -2771,8 +2746,6 @@ function getDisplayName(WrappedComponent) {
          ‘Component’
 }
 ```
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 **(5) 实际应用**
 
@@ -5618,7 +5591,6 @@ const replaceHashPath = (path) => {
 
 复制代码
 ```
-
 在`**hash**`模式下 ，`history.push` 底层是调用了`**window.location.href**`来改变路由。`history.replace`底层是掉用 `window.location.replace`改变路由。
 
 ### 总结
@@ -5998,7 +5970,6 @@ ReactDOM.render(
   node
 );
 ```
-
 ### [`???useParams`](https://v5.reactrouter.com/web/api/Hooks/useparams)
 
 `useParams` returns an object of key/value pairs of URL parameters. Use it to access `match.params` of the current `<Route>`.
@@ -6114,8 +6085,6 @@ If `true` the router will use full page refreshes on page navigation. You may wa
 
 作用：当浏览器不支持 HTML5 的 history API 时强制刷新页面。
 使用场景：同上。
-
-
 
 ```jsx
 <BrowserRouter forceRefresh={true} />
@@ -6292,6 +6261,10 @@ let anchorRef = React.createRef()
 <Link to="/" innerRef={anchorRef} />
 ```
 
+
+
+
+
 ### [component: React.Component](https://v5.reactrouter.com/web/api/Link/component-reactcomponent)
 
 If you would like utilize your own navigation component, you can simply do so by passing it through the `component` prop.
@@ -6312,7 +6285,7 @@ You can also pass props you’d like to be on the `<a>` such as a `title`, `id`,
 
 A special version of the [`Link`](https://v5.reactrouter.com/Link.md) that will add styling attributes to the rendered element when it matches the current URL.
 
-这是 <Link> 的特殊版，顾名思义这就是为页面导航准备的。因为导航需要有 “激活状态”。
+这是 `<Link>` 的特殊版，顾名思义这就是为页面导航准备的。因为导航需要有 “激活状态”。
 
 ```jsx
 <NavLink to="/about">About</NavLink>
@@ -6800,7 +6773,7 @@ The URL to redirect to. Any valid URL path that [`path-to-regexp@^1.7.0`](https:
 <Redirect to="/somewhere/else" />
 ```
 
-## [to: object](https://v5.reactrouter.com/web/api/Redirect/to-object)
+### [to: object](https://v5.reactrouter.com/web/api/Redirect/to-object)
 
 A location to redirect to. `pathname` can be any valid URL path that [`path-to-regexp@^1.7.0`](https://github.com/pillarjs/path-to-regexp/tree/v1.7.0) understands.
 
@@ -6816,7 +6789,7 @@ A location to redirect to. `pathname` can be any valid URL path that [`path-to-r
 
 The `state` object can be accessed via `this.props.location.state` in the redirected-to component. This new `referrer` key (which is not a special name) would then be accessed via `this.props.location.state.referrer` in the `Login` component pointed to by the pathname `'/login'`
 
-## [push: bool](https://v5.reactrouter.com/web/api/Redirect/push-bool)
+### [push: bool](https://v5.reactrouter.com/web/api/Redirect/push-bool)
 
 When `true`, redirecting will push a new entry onto the history instead of replacing the current one.
 
@@ -6824,7 +6797,7 @@ When `true`, redirecting will push a new entry onto the history instead of repla
 <Redirect push to="/somewhere/else" />
 ```
 
-## [from: string](https://v5.reactrouter.com/web/api/Redirect/from-string)
+### [from: string](https://v5.reactrouter.com/web/api/Redirect/from-string)
 
 A pathname to redirect from. Any valid URL path that [`path-to-regexp@^1.7.0`](https://github.com/pillarjs/path-to-regexp/tree/v1.7.0) understands. All matched URL parameters are provided to the pattern in `to`. Must contain all parameters that are used in `to`. Additional parameters not used by `to` are ignored.
 
@@ -6847,7 +6820,7 @@ A pathname to redirect from. Any valid URL path that [`path-to-regexp@^1.7.0`](h
 </Switch>
 ```
 
-## [exact: bool](https://v5.reactrouter.com/web/api/Redirect/exact-bool)
+### [exact: bool](https://v5.reactrouter.com/web/api/Redirect/exact-bool)
 
 Match `from` exactly; equivalent to [Route.exact](https://v5.reactrouter.com/web/api/Route/exact-bool).
 
@@ -6865,7 +6838,7 @@ Match `from` exactly; equivalent to [Route.exact](https://v5.reactrouter.com/web
 </Switch>
 ```
 
-## [strict: bool](https://v5.reactrouter.com/web/api/Redirect/strict-bool)
+### [strict: bool](https://v5.reactrouter.com/web/api/Redirect/strict-bool)
 
 Match `from` strictly; equivalent to [Route.strict](https://v5.reactrouter.com/web/api/Route/strict-bool).
 
@@ -6883,13 +6856,13 @@ Match `from` strictly; equivalent to [Route.strict](https://v5.reactrouter.com/w
 </Switch>
 ```
 
-## [sensitive: bool](https://v5.reactrouter.com/web/api/Redirect/sensitive-bool)
+### [sensitive: bool](https://v5.reactrouter.com/web/api/Redirect/sensitive-bool)
 
 Match `from` case sensitive; equivalent to [Route.sensitive](https://v5.reactrouter.com/web/api/Route/sensitive-bool).
 
 
 
-## [withRouter](https://reacttraining.com/react-router/web/api/withRouter)
+### [withRouter](https://reacttraining.com/react-router/web/api/withRouter)
 
 You can get access to the [`history`](https://reacttraining.com/react-router/web/api/history) object’s properties and the closest [``](https://reacttraining.com/react-router/web/api/Route)'s [`match`](https://reacttraining.com/react-router/web/api/match) via the `withRouter` higher-order component. `withRouter` will pass updated `match`, `location`, and `history` props to the wrapped component whenever it renders.
 
