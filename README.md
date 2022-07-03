@@ -5,7 +5,7 @@
 打包：
 `npm run docs:build`
 
-pre: [https://vuepress-starter-before-fbrssgc4w-ericwong1994.vercel.app/](https://vuepress-starter-before-fbrssgc4w-ericwong1994.vercel.app/)
+博客地址：https://vuepress-starter-3mfpuoro7-ericwong1994.vercel.app/post/blog/
 
 
 
