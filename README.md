@@ -6,8 +6,9 @@
 打包：
 `npm run docs:build`
 
-博客地址：https://vuepress-starter-3mfpuoro7-ericwong1994.vercel.app/post/blog/
+博客地址：
 
+https://vuepress-starter-3mfpuoro7-ericwong1994.vercel.app/post/blog/
 
 
 参考：
