@@ -1,3 +1,9 @@
+启动：
+`npm run docs:dev`
+
+打包：
+`npm run docs:build`
+
 pre: [https://vuepress-starter-before-fbrssgc4w-ericwong1994.vercel.app/](https://vuepress-starter-before-fbrssgc4w-ericwong1994.vercel.app/)
 
 
