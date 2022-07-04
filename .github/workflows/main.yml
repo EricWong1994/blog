@@ -40,4 +40,4 @@ jobs:
           password:  ${{ secrets.REMOTE_PASS }}
           post: 22
           source: "docs/"
-          target:  '/root/github/actions/'
+          target:  '/root/github/actions'
