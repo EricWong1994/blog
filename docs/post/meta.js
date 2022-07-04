@@ -1,8 +1,8 @@
 module.exports = [
 	{
-		title: 'JS',
+		title: 'JS汇总',
 		path: 'js',
-		tags: ['JS汇总'],
+		tags: ['JS'],
 		categories: ['前端'],
 	},
 	{
@@ -16,6 +16,12 @@ module.exports = [
 		title: 'webpack汇总',
 		path: 'webpack',
 		tags: ['Webpack'],
+		categories: ['前端'],
+	},
+	{
+		title: 'typescript汇总',
+		path: 'typescript',
+		tags: ['TypeScript'],
 		categories: ['前端'],
 	},
 ];
