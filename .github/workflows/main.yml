@@ -33,7 +33,7 @@ jobs:
       - name: build app
         run: npm run docs:build
       - name: copy dist file with scp
-        uses: appleboy/scp-action@v0.0.1
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username:  ${{ secrets.REMOTE_USER }}
