@@ -26,7 +26,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: install nodejs
         uses: actions/setup-node@v3.3.0
-        with: "14.X"
+        with: 
+          node-version: "14.X"
       - name: install deps
         run: npm i
       - name: build app
