@@ -39,7 +39,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER:  'root'
           REMOTE_PORT: 22
-          SOURCE: "docs/"
+          SOURCE: 'docs/'
           TARGET:  '/root/github/actions'
           ARGS: '-avzr --delete'
           
