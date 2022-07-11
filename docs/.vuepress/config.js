@@ -2,7 +2,7 @@ const postsHeader = require('./post.header');
 // const { sidebar: blogSidebar } = require('../data/blog');
 
 module.exports = {
-	// base: '/',
+	base: '/',
 	title: '吃核桃不吐皮儿',
 	description: '个人网站',
 	themeConfig: {

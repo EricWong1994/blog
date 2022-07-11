@@ -1,0 +1,19 @@
+version: "3"
+services:
+  blog:
+    build:
+      context: .
+      dockerfile: blog.Dockerfile
+    labels:
+      # 配置域名
+      - "traefik.http.routers.blog.rule=Host(`blog.wangshihao.top`)"
+
+       # 配置 TLS
+      - traefik.http.routers.blog.tls=true
+      - traefik.http.routers.blog.tls.certresolver=le
+
+# 一定要与 traefik 在同一网络下
+networks:
+  default:
+    external:
+      name: traefik_default
