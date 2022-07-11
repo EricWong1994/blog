@@ -1,0 +1,8 @@
+version: '3'
+services:
+  blogtestlocal:
+    build:
+      context: .
+      dockerfile: blog.Dockerfile
+    ports:
+      - 3000:80
