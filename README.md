@@ -18,3 +18,8 @@ https://blog-ericwong1994.vercel.app/post/blog/
 [https://vercel.com/docs](https://vercel.com/docs)
 
 [https://vuepress.vuejs.org/zh/guide/deploy.html#vercel](https://vuepress.vuejs.org/zh/guide/deploy.html#vercel)
+
+docker-compose.yaml为本地测试文件,测试在服务端的情况
+`docker-compose up --build`
+本地进行预览
+localhost:80

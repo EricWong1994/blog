@@ -6,7 +6,8 @@ services:
       dockerfile: blog.Dockerfile
     labels:
       # 配置域名
-      - "traefik.http.routers.blog.rule=Host(`blog.wangshihao.top`)"
+      - traefik.http.routers.blog.rule=Host(`wangshihao.top`)
+      # - "traefik.http.routers.blog.rule=Host(`blog.wangshihao.top`)"
 
        # 配置 TLS
       - traefik.http.routers.blog.tls=true
