@@ -15,6 +15,7 @@ services:
       # https
       - traefik.http.middlewares.blog.redirectscheme.scheme=https
       - traefik.http.middlewares.blog.redirectscheme.permanent=true
+      - traefik.http.routers.blog.middlewares=redirectscheme
 
 # 一定要与 traefik 在同一网络下
 networks:
