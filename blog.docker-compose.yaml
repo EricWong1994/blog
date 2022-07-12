@@ -13,9 +13,12 @@ services:
       # - traefik.http.routers.blog.tls.certresolver=le
       - traefik.http.routers.blog.tls.certresolver=letsEncrypt
       
-      - "traefik.enable=true"
-      - "traefik.http.routers.blog.entrypoints=https"
-      - "traefik.http.routers.blog.service=api@internal"
+      # - "traefik.enable=true"
+      # - "traefik.http.routers.blog.entrypoints=https"
+      # - "traefik.http.routers.blog.service=api@internal"
+
+      - traefik.http.middlewares.my-redirect.redirectscheme.scheme=https
+      - traefik.http.routers.blog.middlewares=my-redirect
 
 # 一定要与 traefik 在同一网络下
 networks:
