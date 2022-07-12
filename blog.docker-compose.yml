@@ -20,6 +20,13 @@ services:
       - traefik.http.middlewares.my-redirect.redirectscheme.scheme=https
       - traefik.http.routers.blog.middlewares=my-redirect
 
+entryPoints:
+  http:
+    address: ":80"
+
+  https:
+    address: ":443"
+
 # 一定要与 traefik 在同一网络下
 networks:
   default:
