@@ -9,13 +9,13 @@ services:
       - traefik.http.routers.blog.rule=Host(`wangshihao.top`)
 
       # 配置 TLS
-      - traefik.http.routers.blog.tls=true
-      # - traefik.http.routers.blog.tls.certresolver=le
-      - traefik.http.routers.blog.tls.certresolver=letsEncrypt
+      - traefik.http.routers.api.tls=true
+      # - traefik.http.routers.api.tls.certresolver=le
+      - traefik.http.routers.api.tls.certresolver=letsEncrypt
       
       - "traefik.enable=true"
-      - "traefik.http.routers.blog.entrypoints=https"
-      - "traefik.http.routers.blog.service=api@internal"
+      - "traefik.http.routers.api.entrypoints=https"
+      - "traefik.http.routers.api.service=api@internal"
 
 # 一定要与 traefik 在同一网络下
 networks:
