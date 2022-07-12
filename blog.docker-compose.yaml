@@ -1,33 +1,31 @@
-http:
-  version: "3"
-  
-  routers:
-      router1:
-        service: myService
-        middlewares:
-          - "test-redirectscheme"
-        rule: "Host(`wangshihao.top`)"
-
-  services:
-    blog:
-      build:
-        context: .
-        dockerfile: blog.Dockerfile
-      labels:
-        # 配置域名
-        - traefik.http.routers.blog.rule=Host(`wangshihao.top`)
-
-        # 配置 TLS
-        - traefik.http.routers.blog.tls=true
-        - traefik.http.routers.blog.tls.certresolver=le
+version: "3"
+routers:
+    router1:
+      service: myService
       middlewares:
-        test-redirectscheme:
-          redirectScheme:
-            scheme: https
-            permanent: true
+        - "test-redirectscheme"
+      rule: "Host(`wangshihao.top`)"
 
-  # 一定要与 traefik 在同一网络下
-  networks:
-    default:
-      external:
-        name: traefik_default
+services:
+  blog:
+    build:
+      context: .
+      dockerfile: blog.Dockerfile
+    labels:
+      # 配置域名
+      - traefik.http.routers.blog.rule=Host(`wangshihao.top`)
+
+      # 配置 TLS
+      - traefik.http.routers.blog.tls=true
+      - traefik.http.routers.blog.tls.certresolver=le
+middlewares:
+  test-redirectscheme:
+    redirectScheme:
+      scheme: https
+      permanent: true
+
+# 一定要与 traefik 在同一网络下
+networks:
+  default:
+    external:
+      name: traefik_default
