@@ -1,1 +1,1 @@
-# 7-6 腾讯云报警测试 githubaction
+# 7-12 腾讯云 blog自建runner
