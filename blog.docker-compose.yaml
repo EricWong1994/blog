@@ -1,4 +1,11 @@
 version: "3"
+routers:
+    router1:
+      service: myService
+      middlewares:
+        - "test-redirectscheme"
+      rule: "Host(`wangshihao.top`)"
+
 services:
   blog:
     build:
@@ -12,7 +19,6 @@ services:
        # 配置 TLS
       - traefik.http.routers.blog.tls=true
       - traefik.http.routers.blog.tls.certresolver=le
-
     middlewares:
       test-redirectscheme:
         redirectScheme:
