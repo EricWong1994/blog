@@ -1,45 +1,33 @@
-version: "3"
-routers:
-    router1:
-      service: myService
+http:
+  version: "3"
+  
+  routers:
+      router1:
+        service: myService
+        middlewares:
+          - "test-redirectscheme"
+        rule: "Host(`wangshihao.top`)"
+
+  services:
+    blog:
+      build:
+        context: .
+        dockerfile: blog.Dockerfile
+      labels:
+        # 配置域名
+        - traefik.http.routers.blog.rule=Host(`wangshihao.top`)
+
+        # 配置 TLS
+        - traefik.http.routers.blog.tls=true
+        - traefik.http.routers.blog.tls.certresolver=le
       middlewares:
-        - "test-redirectscheme"
-      rule: "Host(`wangshihao.top`)"
+        test-redirectscheme:
+          redirectScheme:
+            scheme: https
+            permanent: true
 
-services:
-  blog:
-    build:
-      context: .
-      dockerfile: blog.Dockerfile
-    labels:
-      # 配置域名
-      - traefik.http.routers.blog.rule=Host(`wangshihao.top`)
-      # - "traefik.http.routers.blog.rule=Host(`blog.wangshihao.top`)"
-
-       # 配置 TLS
-      - traefik.http.routers.blog.tls=true
-      - traefik.http.routers.blog.tls.certresolver=le
-    middlewares:
-      test-redirectscheme:
-        redirectScheme:
-          scheme: https
-          permanent: true
-    # middlewares:
-    #     - "foo-add-prefix"
-    #   # https
-    #   - traefik.http.middlewares.blog.redirectscheme.scheme=https
-    #   - traefik.http.middlewares.blog.redirectscheme.permanent=true
-    #   - traefik.http.routers.blog.middlewares=redirectscheme
-
-# 一定要与 traefik 在同一网络下
-networks:
-  default:
-    external:
-      name: traefik_default
-
-# Redirect to https
-# http:
-#   middlewares:
-#     test-redirectscheme:
-#       redirectScheme:
-#         scheme: https
+  # 一定要与 traefik 在同一网络下
+  networks:
+    default:
+      external:
+        name: traefik_default
