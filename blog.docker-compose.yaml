@@ -19,8 +19,9 @@ networks:
     external:
       name: traefik_default
 
-middlewares:
-  test-redirectscheme:
-    redirectScheme:
-      scheme: https
-      permanent: true
+# Redirect to https
+http:
+  middlewares:
+    test-redirectscheme:
+      redirectScheme:
+        scheme: https
