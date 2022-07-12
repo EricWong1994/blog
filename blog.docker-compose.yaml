@@ -12,6 +12,9 @@ services:
        # 配置 TLS
       - traefik.http.routers.blog.tls=true
       - traefik.http.routers.blog.tls.certresolver=le
+      # https
+      - "traefik.http.middlewares.test-redirectscheme.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.test-redirectscheme.redirectscheme.permanent=true"
 
 # 一定要与 traefik 在同一网络下
 networks:
@@ -20,8 +23,8 @@ networks:
       name: traefik_default
 
 # Redirect to https
-http:
-  middlewares:
-    test-redirectscheme:
-      redirectScheme:
-        scheme: https
+# http:
+#   middlewares:
+#     test-redirectscheme:
+#       redirectScheme:
+#         scheme: https
