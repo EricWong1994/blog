@@ -6,14 +6,15 @@ services:
       dockerfile: blog.Dockerfile
     volumes:
       - ./traefik.toml:/etc/traefik/traefik.toml
+      - /var/run/docker.sock:/var/run/docker.sock
     labels:
       # 配置域名
       - traefik.http.routers.blog.rule=Host(`wangshihao.top`)
 
       # 配置 TLS
       - traefik.http.routers.blog.tls=true
-      # - traefik.http.routers.blog.tls.certresolver=le
-      - traefik.http.routers.blog.tls.certresolver=letsEncrypt
+      - traefik.http.routers.blog.tls.certresolver=le
+      # - traefik.http.routers.blog.tls.certresolver=letsEncrypt
       
       # - "traefik.enable=true"
       # - "traefik.http.routers.blog.entrypoints=https"
