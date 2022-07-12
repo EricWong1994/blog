@@ -1,25 +1,20 @@
-状态：开发中，暂无内容
 
 启动：
-`npm run docs:dev`
+`npm run dev`
 
 打包：
-`npm run docs:build`
-
-博客地址：
-
-https://blog-ericwong1994.vercel.app/post/blog/
-
-
-参考：
-
-[https://vercel.com/dashboard](https://vercel.com/dashboard)
-
-[https://vercel.com/docs](https://vercel.com/docs)
-
-[https://vuepress.vuejs.org/zh/guide/deploy.html#vercel](https://vuepress.vuejs.org/zh/guide/deploy.html#vercel)
+`npm run build`
 
 docker-compose.yaml为本地测试文件,测试在服务端的情况
-`docker-compose up --build`
-本地进行预览
-localhost:80
+
+Before push your code:
+
+1、open docker Desktop
+
+2、`docker-compose up --build`
+
+3、本地进行预览 localhost:3000
+
+After develop:
+
+线上地址：https://wangshihao.top/
