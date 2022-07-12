@@ -20,6 +20,6 @@ jobs:
       # 切出代码，使用该 Action 将可以拉取最新代码
       - uses: actions/checkout@v2
       - name: Deploy
-        run: docker compose -f blog.docker-compose.yaml up --build -d blog
+        run: docker compose -f blog.docker-compose.yml up --build -d blog
         env:
           COMMIT_REF_NAME: ${{ github.ref_name }}
