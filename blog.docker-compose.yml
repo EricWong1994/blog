@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: blog.Dockerfile
+    volumes:
+      - ./traefik.toml:/etc/traefik/traefik.toml
     labels:
       # 配置域名
       - traefik.http.routers.blog.rule=Host(`wangshihao.top`)
@@ -17,15 +19,10 @@ services:
       # - "traefik.http.routers.blog.entrypoints=https"
       # - "traefik.http.routers.blog.service=api@internal"
 
-      - traefik.http.middlewares.my-redirect.redirectscheme.scheme=https
-      - traefik.http.routers.blog.middlewares=my-redirect
+      # - traefik.http.middlewares.my-redirect.redirectscheme.scheme=https
+      # - traefik.http.routers.blog.middlewares=my-redirect
 
-entryPoints:
-  http:
-    address: ":80"
-
-  https:
-    address: ":443"
+ 
 
 # 一定要与 traefik 在同一网络下
 networks:
