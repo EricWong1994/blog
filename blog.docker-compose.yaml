@@ -13,8 +13,8 @@ services:
       - traefik.http.routers.blog.tls=true
       - traefik.http.routers.blog.tls.certresolver=le
       # https
-      - "traefik.http.middlewares.test-redirectscheme.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.test-redirectscheme.redirectscheme.permanent=true"
+      - traefik.http.middlewares.blog.redirectscheme.scheme=https
+      - traefik.http.middlewares.blog.redirectscheme.permanent=true
 
 # 一定要与 traefik 在同一网络下
 networks:
