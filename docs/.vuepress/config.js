@@ -5,7 +5,7 @@ const postsHeader = require('./post.header');
 
 module.exports = {
 	base: '',
-	title: '吃核桃不吐皮儿',
+	title: '搬砖达人小王',
 	description: '个人网站',
 	themeConfig: {
 		nav: [
@@ -24,9 +24,28 @@ module.exports = {
 		},
 		sidebarDepth: 2,
 	},
-	// markdown: {
-	// extractHeaders: ['h2', 'h3', 'h4'],
-	// extractHeaders: ['h1', 'h2', 'h3'],
-	// includeLevel: [2, 3, 4],
-	// },
+
+	// plugins: [
+	// 	(options, ctx) => {
+	// 		return {
+	// 			name: 'archive',
+	// 			async additionalPages() {
+	// 				return [
+	// 					{
+	// 						path: '/',
+	// 						frontmatter: {
+	// 							home: true,
+	// 							// heroText: '',
+	// 							// heroImage: 'logo.png',
+	// 							// tagline: '技术博客',
+	// 							actionText: '查看博客  →',
+	// 							actionLink: '/post/blog/',
+	// 							footer: '不要假装很努力，结果不会陪你演戏。',
+	// 						},
+	// 					},
+	// 				];
+	// 			},
+	// 		};
+	// 	},
+	// ],
 };
