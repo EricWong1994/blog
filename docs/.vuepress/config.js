@@ -1,3 +1,5 @@
+// 配置文件
+
 const postsHeader = require('./post.header');
 // const { sidebar: blogSidebar } = require('../data/blog');
 
