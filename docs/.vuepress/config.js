@@ -4,6 +4,7 @@ const postsHeader = require('./post.header');
 // const { sidebar: blogSidebar } = require('../data/blog');
 
 module.exports = {
+	port: '9000',
 	base: '',
 	title: '搬砖达人小王',
 	description: '个人网站',
@@ -12,7 +13,7 @@ module.exports = {
 			// { text: '主页', link: '/' },
 			// { text: '博客', link: '/blog/' },
 			// { text: '博客', link: '/blog/index.md' },
-			{ text: '博客', link: '/post/blog/' },
+			{ text: '个人博客', link: '/post/blog/' },
 			{
 				text: 'Github',
 				link: 'https://github.com/EricWong1994/blog',

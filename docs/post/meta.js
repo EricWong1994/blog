@@ -24,4 +24,10 @@ module.exports = [
 		tags: ['TypeScript'],
 		categories: ['前端'],
 	},
+	{
+		title: '前端工具链',
+		path: 'buildtool/buildtool',
+		tags: ['构建打包'],
+		categories: ['前端'],
+	},
 ];
